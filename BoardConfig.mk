@@ -44,8 +44,10 @@ AB_OTA_PARTITIONS += \
     boot \
     system \
     vendor
+PRODUCT_PACKAGES += \
+  update_engine \
+  update_verifier
 
-TW_INCLUDE_REPACKTOOLS := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := None
@@ -60,6 +62,8 @@ TARGET_KERNEL_CONFIG := rhode_defconfig
 
 # Platform
 TARGET_BOARD_PLATFORM := bengal
+TARGET_NO_RECOVERY := true
+BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
@@ -78,3 +82,4 @@ TW_USE_TOOLBOX := true
 TW_HAS_NO_RECOVERY_PARTITION := true
 TW_INCLUDE_CRYPTO := true
 TWRP_INCLUDE_LOGCAT := true
+TW_INCLUDE_REPACKTOOLS := true
