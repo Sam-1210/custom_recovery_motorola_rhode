@@ -23,12 +23,6 @@ PRODUCT_PACKAGES += \
     bootctrl.sdm845 \
     bootctrl.sdm845.recovery
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.sdm845 \
-    libgptutils \
-    libz \
-    libcutils
-
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
