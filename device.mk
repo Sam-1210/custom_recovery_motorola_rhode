@@ -20,10 +20,11 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service \
 
 PRODUCT_PACKAGES += \
-    bootctrl.bengal
+    bootctrl.sdm845 \
+    bootctrl.sdm845.recovery
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.bengal \
+    bootctrl.sdm845 \
     libgptutils \
     libz \
     libcutils
