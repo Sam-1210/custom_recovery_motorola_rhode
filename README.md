@@ -1,2 +1,2 @@
-# android_device_motorola_rhode
+# README.md
 TWRP Unofficial Device Tree for Motorola G52 (rhode)
