@@ -24,3 +24,12 @@ PRODUCT_NAME := twrp_rhode
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g(100)
 PRODUCT_MANUFACTURER := motorola
+
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# fastbootD
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.0-impl-mock.recovery \
+    fastbootd
