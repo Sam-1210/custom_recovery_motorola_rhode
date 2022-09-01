@@ -14,10 +14,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_OPTIONAL_system=true
 
 # Boot control HAL
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-impl.recovery \
-    android.hardware.boot@1.0-service 
+# PRODUCT_PACKAGES += \
+ #  android.hardware.boot@1.0-impl \
+  #  android.hardware.boot@1.0-impl.recovery \
+  #  android.hardware.boot@1.0-service 
 
 PRODUCT_PACKAGES += \
     bootctrl.sdm845 \
@@ -27,12 +27,12 @@ PRODUCT_PACKAGES += \
     libz \
     libcutils
 
-PRODUCT_PACKAGES += \
-    otapreopt_script \
-    cppreopts.sh \
-    update_engine \
-    update_verifier \
-    update_engine_sideload
+#PRODUCT_PACKAGES += \
+ #   otapreopt_script \
+  #  cppreopts.sh \
+   # update_engine \
+   # update_verifier \
+  #  update_engine_sideload
 
 PRODUCT_PACKAGES += \
     ramdisk_file-timestamps
