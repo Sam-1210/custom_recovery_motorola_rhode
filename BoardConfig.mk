@@ -64,6 +64,7 @@ TARGET_USES_UEFI := true
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+PRODUCT_COPY_FILES += device/motorola/rhode/twrp.fstab:recovery/root/etc/twrp.fstab
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/twrp.fstab
 
 # Hack: prevent anti rollback
