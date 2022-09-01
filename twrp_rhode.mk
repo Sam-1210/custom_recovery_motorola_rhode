@@ -22,7 +22,7 @@ $(call inherit-product-if-exists, vendor/twrp/config/gsm.mk)
 PRODUCT_DEVICE := rhode
 PRODUCT_NAME := twrp_rhode
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := moto g(100)
+PRODUCT_MODEL := Moto G52
 PRODUCT_MANUFACTURER := motorola
 
 # Partitions
@@ -34,3 +34,6 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd
+# MTP support
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp
