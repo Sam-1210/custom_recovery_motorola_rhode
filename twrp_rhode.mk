@@ -27,6 +27,7 @@ PRODUCT_MANUFACTURER := motorola
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+INTERNAL_RECOVERY_RAMDISK_FILES_TIMESTAMP := $(call intermediates-dir-for,PACKAGING,recovery)/ramdisk_files-timestamp
 
 # fastbootD
 PRODUCT_PACKAGES += \
