@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := $(call my-dir)
+LOCAL_PATH := device/motorola/rhode
 
 ifeq ($(TARGET_DEVICE),rhode)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
