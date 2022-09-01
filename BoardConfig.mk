@@ -64,6 +64,7 @@ TARGET_USES_UEFI := true
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/recovery.fstab
 
 # Hack: prevent anti rollback
 BOARD_USES_QCOM_FBE_DECRYPTION := true
