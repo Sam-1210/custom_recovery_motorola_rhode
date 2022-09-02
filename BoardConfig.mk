@@ -124,6 +124,7 @@ TW_DEFAULT_LANGUAGE := en-US
 # SHRP Prop
 SHRP_MAINTAINER := carlodeeCryptonTestBuild
 SHRP_DEVICE_CODE := rhode
+SHRP_PATH := device/motorola/rhode
 SHRP_REC_TYPE := Treble
 SHRP_DEVICE_TYPE := A/B
 SHRP_NOTCH := true
