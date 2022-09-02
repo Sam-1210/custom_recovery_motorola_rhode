@@ -65,8 +65,10 @@ TARGET_USES_UEFI := true
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 PRODUCT_COPY_FILES += device/motorola/rhode/twrp.fstab:recovery/root/system/etc/twrp.fstab
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/system/etc/twrp.fstab
-TARGET_RECOVERY_INITRC := $(LOCAL_PATH)/recovery/root/system/etc/init/hw/init.rc
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/twrp.fstab
+TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/system/etc/init/hw/init.rc
+TARGET_PREBUILT_RECOVERY_RAMDISK_CPIO := $(DEVICE_PATH)/ramdisk-recovery.cpio
+
 
 # Hack: prevent anti rollback
 BOARD_USES_QCOM_FBE_DECRYPTION := true
