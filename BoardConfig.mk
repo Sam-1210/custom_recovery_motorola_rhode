@@ -46,7 +46,20 @@ AB_OTA_PARTITIONS += \
 
 
 # Kernel
-BOARD_KERNEL_CMDLINE := None
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 \
+			earlycon=msm_geni_serial,0x4a90000 \
+			androidboot.hardware=qcom \
+			androidboot.console=ttyMSM0 \
+			androidboot.memcg=1 \
+			lpm_levels.sleep_disabled=1 \
+			video=vfb:640x400,bpp=32,memsize=3072000 \
+			msm_rtb.filter=0x237\
+			service_locator.enable=1 \
+			swiotlb=2048 \
+			androidboot.hab.csv=5 \
+			androidboot.hab.product=cebu \
+			androidboot.hab.cid=50 \
+			firmware_class.path=/vendor/firmware_mnt/image
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 BOARD_BOOTIMG_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
@@ -58,7 +71,9 @@ TARGET_KERNEL_CONFIG := rhode_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # Platform
+BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := bengal
+QCOM_BOARD_PLATFORMS += bengal
 TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_USES_UEFI := true
