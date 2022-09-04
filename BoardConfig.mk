@@ -57,7 +57,7 @@ BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 \
 			service_locator.enable=1 \
 			swiotlb=2048 \
 			androidboot.hab.csv=5 \
-			androidboot.hab.product=cebu \
+			androidboot.hab.product=rhode \
 			androidboot.hab.cid=50 \
 			firmware_class.path=/vendor/firmware_mnt/image
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
@@ -82,7 +82,7 @@ TARGET_USES_UEFI := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 PRODUCT_COPY_FILES += device/motorola/rhode/twrp.fstab:recovery/root/system/etc/twrp.fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/twrp.fstab
-TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/system/etc/init/hw/init.rc
+TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.qcom.rc
 TARGET_PREBUILT_RECOVERY_RAMDISK_CPIO := $(DEVICE_PATH)/ramdisk-recovery.cpio
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
