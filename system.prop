@@ -5,13 +5,6 @@ persist.vold.ecryptfs_supported=true
 
 ro.adb.secure=1
 ro.debuggable=1
-ro.system.build.version.sdk=30
-ro.product.system.brand=motorola
-ro.product.system.device=rhode
-ro.product.device=rhode
-ro.product.system.manufacturer=motorola
-ro.product.system.model=moto G52
-ro.product.system.name=rhode_g
 ro.treble.enabled=true
 ro.vendor.qti.va_aosp.support=1
 ro.boot.dynamic_partitions=true
