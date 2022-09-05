@@ -83,7 +83,7 @@ TARGET_USES_UEFI := true
 
 # Workarounds
 TARGET_COPY_OUT_VENDOR := vendor
-TARGET_COPY_OUT_PRODUCT := product
+#TARGET_COPY_OUT_PRODUCT := product
 
 
 # Recovery
