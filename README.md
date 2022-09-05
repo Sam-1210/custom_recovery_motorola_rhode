@@ -4,7 +4,7 @@ Unofficial Custom Recovery Device Tree for Motorola G52 (rhode)
 
 ## Device Specifications
 
-Basic   | Spec Sheet
+Type   | Specs
 -------:|:------------------------
 CPU     | Octa-core (4x2.4 GHz Kryo 265 Gold & 4x1.8 GHz Kryo 265 Silver)
 CHIPSET | Qualcomm SM6225 (SM6115 "Bengal") Snapdragon 680 4G (6nm)
