@@ -22,18 +22,13 @@ $(call inherit-product-if-exists, vendor/twrp/config/gsm.mk)
 PRODUCT_DEVICE := rhode
 PRODUCT_NAME := twrp_rhode
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Moto G52
+PRODUCT_MODEL := Motorola G52
 PRODUCT_MANUFACTURER := motorola
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 INTERNAL_RECOVERY_RAMDISK_FILES_TIMESTAMP := $(call intermediates-dir-for,PACKAGING,recovery)/ramdisk_files-timestamp
 
-# fastbootD
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    android.hardware.fastboot@1.0-impl-mock.recovery \
-    fastbootd
 # MTP support
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
