@@ -47,9 +47,6 @@ AB_OTA_PARTITIONS += \
     boot \
     system \
     vendor
-PRODUCT_PACKAGES += \
-    update_engine \
-    update_verifier
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 \
@@ -94,9 +91,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/twrp.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.qcom.rc
 TARGET_PREBUILT_RECOVERY_RAMDISK_CPIO := $(DEVICE_PATH)/ramdisk-recovery.cpio
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
-#ifeq ($(BUILDING_RECOVERY_IMAGE),true)
-#INTERNAL_RECOVERY_RAMDISK_FILES_TIMESTAMP := $(call intermediates-dir-for,PACKAGING,recovery)/ramdisk_files-timestamp
-#endif
 
 
 # AVB
@@ -148,47 +142,3 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_DEFAULT_LANGUAGE := en-US
 TW_INCLUDE_INJECTTWRP := true
-
-# SHRP Prop
-SHRP_MAINTAINER := carlodeeCryptonTestBuild
-SHRP_DEVICE_CODE := rhode
-SHRP_PATH := device/motorola/rhode
-SHRP_REC_TYPE := Treble
-SHRP_DEVICE_TYPE := A/B
-SHRP_NOTCH := true
-SHRP_EDL_MODE := 1
-SHRP_EXTERNAL := /external_sd
-SHRP_INTERNAL := /sdcard
-SHRP_OTG := /usb_otg
-SHRP_FLASH := 1
-SHRP_DARK := true
-SHRP_REC := /dev/block/bootdevice/by-name/boot
-SHRP_EXPRESS := true
-
-# USE SHRP Addons
-
-SHRP_EXTERNAL_ADDON_PATH := “device/motorola/rhode/addon/”
-SHRP_EXTERNAL_ADDON_1_NAME := “SELinux Permissiver”
-SHRP_EXTERNAL_ADDON_1_INFO := “Makes SELinux Permissive”
-SHRP_EXTERNAL_ADDON_1_FILENAME := “permissiver.zip”
-SHRP_EXTERNAL_ADDON_1_BTN_TEXT := “Flash”
-SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := “Flashed Successfully”
-SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
-SHRP_EXTERNAL_ADDON_2_NAME := “SELinux Enforcer”
-SHRP_EXTERNAL_ADDON_2_INFO := “Reverts Back to Enforcing SELinux”
-SHRP_EXTERNAL_ADDON_2_FILENAME := “enforcer.zip”
-SHRP_EXTERNAL_ADDON_2_BTN_TEXT := “Flash”
-SHRP_EXTERNAL_ADDON_2_SUCCESSFUL_TEXT := “Flashed Successfully”
-SHRP_INC_IN_REC_EXTERNAL_ADDON_2 := true
-SHRP_EXTERNAL_ADDON_3_NAME := “[MIUI] Disable Replace SHRP”
-SHRP_EXTERNAL_ADDON_3_INFO := “Flash in MIUI To Stop MIUI Recovery From Replacing”
-SHRP_EXTERNAL_ADDON_3_FILENAME := “disable-replace-shrp.zip”
-SHRP_EXTERNAL_ADDON_3_BTN_TEXT := “Flash”
-SHRP_EXTERNAL_ADDON_3_SUCCESSFUL_TEXT := “Flashed Successfully”
-SHRP_INC_IN_REC_EXTERNAL_ADDON_3 := true
-SHRP_EXTERNAL_ADDON_4_NAME := “Magisk-V25.2”
-SHRP_EXTERNAL_ADDON_4_INFO := “Flash It To Get Root Access”
-SHRP_EXTERNAL_ADDON_4_FILENAME := “Magisk-V25.2.zip”
-SHRP_EXTERNAL_ADDON_4_BTN_TEXT := “Flash”
-SHRP_EXTERNAL_ADDON_4_SUCCESSFUL_TEXT := “Installed”
-SHRP_INC_IN_REC_EXTERNAL_ADDON_4 := true
