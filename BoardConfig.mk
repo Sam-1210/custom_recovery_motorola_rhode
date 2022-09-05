@@ -35,7 +35,7 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-TARGET_COPY_OUT_VENDOR := vendor
+#TARGET_COPY_OUT_VENDOR := vendor
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := bengal
@@ -83,13 +83,13 @@ QCOM_BOARD_PLATFORMS += bengal
 TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_USES_UEFI := true
-TARGET_COPY_OUT_VENDOR := vendor
-TARGET_COPY_OUT_PRODUCT := product
+#TARGET_COPY_OUT_VENDOR := vendor
+#TARGET_COPY_OUT_PRODUCT := product
 
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-PRODUCT_COPY_FILES += device/motorola/rhode/twrp.fstab:recovery/root/system/etc/twrp.fstab
+#PRODUCT_COPY_FILES += device/motorola/rhode/twrp.fstab:recovery/root/system/etc/twrp.fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/twrp.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.qcom.rc
 TARGET_PREBUILT_RECOVERY_RAMDISK_CPIO := $(DEVICE_PATH)/ramdisk-recovery.cpio
