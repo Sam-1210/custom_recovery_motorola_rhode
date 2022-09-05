@@ -73,6 +73,9 @@ TARGET_KERNEL_SOURCE := kernel/motorola/rhode
 TARGET_KERNEL_CONFIG := rhode_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 
+# Found Elf workaround
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := bengal
