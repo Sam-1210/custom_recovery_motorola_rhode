@@ -40,8 +40,8 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.fastboot@1.0-impl-mock \
-    fastbootd
-    bootctrl.$(PRODUCT_PLATFORM).recovery
+    fastbootd \
+    #bootctrl.$(PRODUCT_PLATFORM).recovery
 
 #PRODUCT_PACKAGES += \
  #   otapreopt_script \
