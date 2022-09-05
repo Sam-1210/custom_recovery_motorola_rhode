@@ -4,8 +4,8 @@
     "repository": "TeamWin/android_device_qcom_twrp-common",
     "target_path": "device/qcome/twrp-common",
     "revision": "android-12.1"
-   },
-   {
+   }
+  # {
     #"remote": "LineageOS",
     #"repository": "android_hardware_qcom_bootctrl",
    # "target_path": "hardware/qcom-caf/bootctrl",
