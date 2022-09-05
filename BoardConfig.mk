@@ -94,9 +94,9 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/twrp.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.qcom.rc
 TARGET_PREBUILT_RECOVERY_RAMDISK_CPIO := $(DEVICE_PATH)/ramdisk-recovery.cpio
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
-ifeq ($(BUILDING_RECOVERY_IMAGE),true)
-INTERNAL_RECOVERY_RAMDISK_FILES_TIMESTAMP := $(call intermediates-dir-for,PACKAGING,recovery)/ramdisk_files-timestamp
-endif
+#ifeq ($(BUILDING_RECOVERY_IMAGE),true)
+#INTERNAL_RECOVERY_RAMDISK_FILES_TIMESTAMP := $(call intermediates-dir-for,PACKAGING,recovery)/ramdisk_files-timestamp
+#endif
 
 
 # AVB
