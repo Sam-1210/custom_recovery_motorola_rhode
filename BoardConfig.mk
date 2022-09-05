@@ -80,8 +80,10 @@ QCOM_BOARD_PLATFORMS += bengal
 TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_USES_UEFI := true
-#TARGET_COPY_OUT_VENDOR := vendor
-#TARGET_COPY_OUT_PRODUCT := product
+
+# Workarounds
+TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_PRODUCT := product
 
 
 # Recovery
