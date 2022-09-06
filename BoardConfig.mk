@@ -149,3 +149,5 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_DEFAULT_LANGUAGE := en-US
 TW_INCLUDE_INJECTTWRP := true
+TW_DEVICE_VERSION := carlodeeCrypton
+Maintainer := "carlodeeCrypton"
