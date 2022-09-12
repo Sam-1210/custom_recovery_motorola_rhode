@@ -1,5 +1,5 @@
 cc_library {
-    name: "libgptutils.motorola_bengal",
+    name: "libgptutils.sony_msmnile",
     vendor: true,
     recovery_available: true,
     shared_libs: [
