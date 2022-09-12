@@ -32,7 +32,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296 # This is the maximum known partition size, but it can be higher, so we just omit it
 BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
@@ -63,6 +62,12 @@ BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 \
 			androidboot.hab.product=rhode \
 			androidboot.hab.cid=50 \
 			firmware_class.path=/vendor/firmware_mnt/image
+BOARD_BOOTCONFIG += androidboot.hardware=qcom \
+		    androidboot.console=ttyMSM0 \
+	            androidboot.memcg=1 \
+                    androidboot.hab.csv=5 \
+		    androidboot.hab.product=rhode \
+	            androidboot.hab.cid=50 
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 BOARD_BOOTIMG_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
