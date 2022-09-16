@@ -62,6 +62,7 @@ BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 \
 			androidboot.hab.product=rhode \
 			androidboot.hab.cid=50 \
 			firmware_class.path=/vendor/firmware_mnt/image
+                        androidboot.selinux=permissive
 BOARD_BOOTCONFIG += androidboot.hardware=qcom \
 		    androidboot.console=ttyMSM0 \
 	            androidboot.memcg=1 \
