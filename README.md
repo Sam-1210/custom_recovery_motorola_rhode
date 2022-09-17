@@ -1,6 +1,7 @@
 # README.md
 
 Unofficial Custom Recovery Device Tree for Motorola G52 (rhode)
+- Not booting yet...
 
 ## Device Specifications
 
