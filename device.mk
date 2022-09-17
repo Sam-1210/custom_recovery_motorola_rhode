@@ -32,27 +32,30 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_OPTIONAL_system=true
 
 # Boot control HAL
-# PRODUCT_PACKAGES += \
- #  android.hardware.boot@1.0-impl \
-  #  android.hardware.boot@1.0-impl.recovery \
-  #  android.hardware.boot@1.0-service 
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-impl.recovery \
+    android.hardware.boot@1.0-service 
 
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd \
-    #bootctrl.$(PRODUCT_PLATFORM).recovery
+    
+PRODUCT_PACKAGES += \
+    bootctrl.bengal.recovery \
+    bootctrl.bengal
 
 #PRODUCT_PACKAGES += \
- #   otapreopt_script \
-  #  cppreopts.sh \
-   # update_engine \
-   # update_verifier \
-  #  update_engine_sideload
+    otapreopt_script \
+    cppreopts.sh \
+    update_engine \
+    update_verifier \
+    update_engine_sideload
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+# PRODUCT_SOONG_NAMESPACES += \
+#    $(LOCAL_PATH)
 
 # Encryption
 PRODUCT_PACKAGES += \
