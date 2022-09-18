@@ -1,14 +1,8 @@
 [
   {
-    "remote": "TeamWin",
-    "repository": "TeamWin/android_device_qcom_twrp-common",
-    "target_path": "device/qcome/twrp-common",
-    "branch": "android-12.1"
+    "remote": "github",
+    "repository": "carlodeeCrypton/kernel_motorola_rhode",
+    "target_path": "device/motorola/rhode",
+    "branch": "android-12-release-ssr"
    }
-   {
-    "remote": "LineageOS",
-    "repository": "android_hardware_qcom_bootctrl",
-    "target_path": "hardware/qcom-caf/bootctrl",
-   "branch": "lineage-19.1-caf"
-  }
 ]
