@@ -48,27 +48,14 @@ AB_OTA_PARTITIONS += \
     vendor
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 \
-			earlycon=msm_geni_serial,0x4a90000 \
-			androidboot.hardware=qcom \
-			androidboot.console=ttyMSM0 \
-			androidboot.memcg=1 \
-			lpm_levels.sleep_disabled=1 \
-			video=vfb:640x400,bpp=32,memsize=3072000 \
-			msm_rtb.filter=0x237\
-			service_locator.enable=1 \
-			swiotlb=2048 \
-			androidboot.hab.csv=5 \
-			androidboot.hab.product=rhode \
-			androidboot.hab.cid=50 \
-			firmware_class.path=/vendor/firmware_mnt/image
-                        androidboot.selinux=permissive
-BOARD_BOOTCONFIG += androidboot.hardware=qcom \
-		    androidboot.console=ttyMSM0 \
-	            androidboot.memcg=1 \
-                    androidboot.hab.csv=5 \
-		    androidboot.hab.product=rhode \
-	            androidboot.hab.cid=50 
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a90000 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 swiotlb=2048 service_locator.enable=1 firmware_class.path=/vendor/firmware_mnt/image
+BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
+BOARD_KERNEL_CMDLINE += androidboot.memcg=1
+BOARD_KERNEL_CMDLINE += androidboot.hab.csv=5
+BOARD_KERNEL_CMDLINE += androidboot.hab.product=rhode
+BOARD_KERNEL_CMDLINE += androidboot.hab.cid=50			
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 BOARD_BOOTIMG_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
