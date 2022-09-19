@@ -53,10 +53,6 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload
 
-# Soong namespaces
-# PRODUCT_SOONG_NAMESPACES += \
-#    $(LOCAL_PATH)
-
 # Encryption
 PRODUCT_PACKAGES += \
     qcom_decrypt \
@@ -66,10 +62,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.bootimage.build.date.utc \
     ro.build.date.utc
-
-# Apex libraries
-#PRODUCT_COPY_FILES += \
-   # $(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
 
 # Copy modules for depmod
 PRODUCT_COPY_FILES += \
