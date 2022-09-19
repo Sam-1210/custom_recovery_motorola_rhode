@@ -63,7 +63,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/motorola/rhode
-TARGET_KERNEL_CONFIG := rhode_defconfig
+TARGET_KERNEL_CONFIG := rhode_bengal_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # Found Elf workaround
