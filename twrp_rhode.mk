@@ -27,7 +27,15 @@ PRODUCT_MANUFACTURER := motorola
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-INTERNAL_RECOVERY_RAMDISK_FILES_TIMESTAMP := $(call intermediates-dir-for,PACKAGING,recovery)/ramdisk_files-timestamp
+
+# GMS
+PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+# Override Props
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="rhode_g-user 11 S1SR32.38-14-2 b5f55 release-keys"
+
+BUILD_FINGERPRINT := motorola/rhode_g/rhode:11/S1SR32.38-14-2/b5f55:user/release-keys
 
 # MTP support
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
