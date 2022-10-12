@@ -58,7 +58,7 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.build.date.utc
 
 # Copy modules for depmod
-PRODUCT_COPY_FILES += \
+# PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/chipone_tddi_mmi.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/chipone_tddi_mmi.ko \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/focaltech_0flash_mmi.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/focaltech_0flash_mmi.ko \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/exfat.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/exfat.ko \
