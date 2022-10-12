@@ -163,7 +163,7 @@ jobs:
       working-directory: ${{ steps.pwd.outputs.pwd }}
 
     - name: Upload to Release
-      uses: gaoDean/action-gh-release@1
+      uses: softprops/action-gh-release@1
       with:
         files: workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.BUILD_TARGET }}.img
         name: Motorola G52 (${{ github.event.inputs.DEVICE_NAME }}) TWRP Alpha-${{ github.run_id }}
