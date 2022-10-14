@@ -59,8 +59,6 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
 
 # Modules from vendor_boot.img
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/ldcheck:$(TARGET_COPY_OUT_RECOVERY)/root/ldcheck \
-    $(LOCAL_PATH)/recovery/root/libneeds:$(TARGET_COPY_OUT_RECOVERY)/root/libneeds \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/adapter_class.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/adapter_class.ko \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/cw2217b_fg_mmi.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/cw2217b_fg_mmi.ko \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/mmi_annotate.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/mmi_annotate.ko \
