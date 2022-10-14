@@ -171,5 +171,10 @@ jobs:
         body: |
           Manifest: ${{ github.event.inputs.MANIFEST_BRANCH }}
           Device: ${{ github.event.inputs.DEVICE_NAME }}
+     - name: Run LDCheck
+      run: |
+        PATH=~/bin:$PATH
+        cd workspace/out/target/product/rhode/root
+        python3 ldcheck -p system/lib64:vendor/lib64 -d system/bin/qseecomd
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
