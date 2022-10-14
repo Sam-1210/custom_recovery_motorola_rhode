@@ -175,7 +175,7 @@ jobs:
     - name: Run LDCheck
       run: |
         cd workspace/out/target/product/rhode/recovery/root
-        python3 ldcheck -p system/lib64:vendor/lib64 -d ${{github.event.inputs.LIBS_BIN_PATH }}
+        python3 ldcheck -p system/lib64:vendor/lib64 -d system/bin/qseecomd
       continue-on-error: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
