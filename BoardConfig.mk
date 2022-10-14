@@ -70,6 +70,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_CONFIG := rhode_bengal_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/rhode
+BOARD_VENDOR_KERNEL_MODULES += $(DEVICE_PATH)/recovery/root/vendor/lib/modules/$(wildcard *.ko)
 
 # Found Elf workaround
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
