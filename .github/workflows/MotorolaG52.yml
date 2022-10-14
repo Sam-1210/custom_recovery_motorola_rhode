@@ -1,4 +1,4 @@
-name: Motorola G52 (rhode) Build
+name: Motorola G52 (rhode) Vendor
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ on:
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'rhode-12.1'
+        default: 'vendor_boot-12.1'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
@@ -171,5 +171,10 @@ jobs:
         body: |
           Manifest: ${{ github.event.inputs.MANIFEST_BRANCH }}
           Device: ${{ github.event.inputs.DEVICE_NAME }}
+          
+    - name: Run LDCheck
+      run: |
+        cd workspace/out/target/product/rhode/
+        python3 ldcheck -p system/lib64:vendor/lib64 -d ${{github.event.inputs.LIBS_BIN_PATH }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
