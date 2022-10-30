@@ -1,8 +1,0 @@
-[
-  {
-    "remote": "github",
-    "repository": "carlodeeCrypton/kernel_motorola_rhode",
-    "target_path": "kernel/motorola/rhode",
-    "branch": "android-12-release-ssr"
-   }
-]
