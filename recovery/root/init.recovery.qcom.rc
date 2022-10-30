@@ -25,30 +25,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import /init.recovery.qcom_decrypt.fbe.rc
-    
-service vendor.qseecomd /vendor/bin/qseecomd
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0
-    
-on early-init
-    insmod /lib/modules/mmi_annotate.ko
-    insmod /lib/modules/mmi_info.ko
-    insmod /lib/modules/cw2217b_fg_mmi.ko
-    insmod /lib/modules/adapter_class.ko
-    insmod /lib/modules/mmi_charger.ko
-    insmod /lib/modules/mmi_discrete_charger_class.ko
-    insmod /lib/modules/sgm4154x_charger.ko
-    insmod /lib/modules/mmi_discrete_charger.ko
-    insmod /lib/modules/qpnp_adaptive_charge.ko
-    insmod /lib/modules/tcpc_class.ko
-    insmod /lib/modules/tcpc_sgm7220.ko
-    insmod /lib/modules/rt_pd_manager.ko
+import /init.recovery.qcom_decrypt.rc
 
 on init
-    start vendor.qseecomd
     setprop sys.usb.configfs 1
     mkdir /config
     mount configfs none /config
