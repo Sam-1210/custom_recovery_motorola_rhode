@@ -67,7 +67,7 @@ endif
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
-BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_IMAGE_NAME := kernel
 TARGET_KERNEL_CONFIG := rhode_bengal_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/rhode
 TW_LOAD_VENDOR_MODULES += "adapter_class.ko cw2217b_fg_mmi.ko mmi_annotate.ko mmi_charger.ko mmi_discrete_charger_class.ko mmi_discrete_charger.ko mmi_info.ko qpnp_adaptive_charge.ko rt_pd_manager.ko sgm4145x_charger.ko tcpc_class.ko tcpc_sgm7220.ko"
@@ -88,10 +88,9 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_PRODUCT := product
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 
-
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/twrp.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.qcom.rc
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/vendor.prop
@@ -142,4 +141,4 @@ RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_DEFAULT_LANGUAGE := en-US
-TW_DEVICE_VERSION := carlodeeCrypton
+TW_DEVICE_VERSION := Alpha-rhode
