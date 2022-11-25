@@ -53,7 +53,14 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Soong Config
 SOONG_CONFIG_NAMESPACES += ufsbsg
 SOONG_CONFIG_ufsbsg += ufsframework
 SOONG_CONFIG_ufsbsg_ufsframework := bsg
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.fuse.passthrough.enable=true
+
+# Enforce AB
+TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
+
+# Dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
