@@ -162,7 +162,7 @@ jobs:
         draft: false
         prerelease: true
         token: ${{ secrets.GITHUB_TOKEN }}
-        tag: rog6-v${{ steps.props.outputs.date }}-${{ github.run_id }}
+        tag: ${{ steps.props.outputs.date }}-${{ github.run_id }}
         body: |
           ## TWRP v3.7.0_12.1-rhode-${{ steps.props.outputs.date }}
           - To be edited.
@@ -172,7 +172,7 @@ jobs:
     - name: Github Release URL
       run: |
         echo "Printing your Release URL"
-        echo "https://github.com/${GITHUB_REPOSITORY}/releases/tag/rog6-v${{ steps.props.outputs.date }}-${{ github.run_id }}"
+        echo "https://github.com/${GITHUB_REPOSITORY}/releases/tag/${{ steps.props.outputs.date }}-${{ github.run_id }}"
 
     - name: Clone LDChecker
       run: |
