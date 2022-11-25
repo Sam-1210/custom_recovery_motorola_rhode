@@ -1,15 +1,2 @@
-# System.prop
-
-security.perf_harden=1
-persist.vold.ecryptfs_supported=true
-
-ro.adb.secure=1
-ro.debuggable=1
-ro.vendor.qti.va_aosp.support=1
-ro.boot.dynamic_partitions=true
-ro.board.platform=bengal
-ro.build.ab_update=true
-ro.incremental.enable=1
-ro.soc.manufacturer=QTI
-ro.boot.avb_version=2.0
-ro.boot.vbmeta.avb_version=2.0
+# Battery Property
+ro.charger.enable_suspend=1

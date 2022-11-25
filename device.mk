@@ -49,11 +49,11 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(LOCAL_PATH)/security/otacert
 
-# Copy recovery depmod
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.ko,device/motorola/rhode/prebuilt/modules/,$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/) \
-    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/modules.alias:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/modules.alias \
-    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/modules.blocklist:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/modules.blocklist \
-    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/modules.dep:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/modules.dep \
-    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/modules.load:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/modules.load \
-    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/modules.softdep:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/modules.softdep 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
+SOONG_CONFIG_NAMESPACES += ufsbsg
+SOONG_CONFIG_ufsbsg += ufsframework
+SOONG_CONFIG_ufsbsg_ufsframework := bsg
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.fuse.passthrough.enable=true
