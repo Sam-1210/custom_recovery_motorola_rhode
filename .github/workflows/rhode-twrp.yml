@@ -1,4 +1,4 @@
-name: ROG Phone 6 - TWRP
+name: Motorola G52 - TWRP
 
 on:
   workflow_dispatch:
